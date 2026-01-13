@@ -58,7 +58,7 @@
                 <option>Engine Cleaning</option>
             </select>
 
-            <input type="date" name="date" required>
+            <input type="date" name="date" required oninvalid="this.setCustomValidity('Please select a booking date')" oninput="this.setCustomValidity('')">
 
             <button type="submit">Request Booking</button>
         </form>
@@ -79,3 +79,4 @@
 
 </body>
 </html>
+
