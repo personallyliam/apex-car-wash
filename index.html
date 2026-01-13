@@ -32,27 +32,37 @@
         </ul>
     </section>
 
+    <!-- BOOKING SECTION -->
     <section class="booking">
-    <h2>Book a Wash</h2>
+        <h2>Book a Wash</h2>
 
-    <form class="booking-form">
-        <input type="text" placeholder="Full Name" required>
-        <input type="tel" placeholder="Phone Number" required>
+        <form
+            class="booking-form"
+            action="https://formsubmit.co/personally.liam@gmail.com"
+            method="POST"
+        >
+            <!-- Required hidden settings -->
+            <input type="hidden" name="_subject" value="New Apex Car Wash Booking">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
 
-        <select required>
-            <option value="">Select Service</option>
-            <option>Exterior Wash</option>
-            <option>Interior Cleaning</option>
-            <option>Full Valet</option>
-            <option>Engine Cleaning</option>
-        </select>
+            <!-- Step 2: NAMED INPUTS -->
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
 
-        <input type="date" required>
+            <select name="service" required>
+                <option value="">Select Service</option>
+                <option>Exterior Wash</option>
+                <option>Interior Cleaning</option>
+                <option>Full Valet</option>
+                <option>Engine Cleaning</option>
+            </select>
 
-        <button type="submit">Request Booking</button>
-    </form>
-</section>
+            <input type="date" name="date" required>
 
+            <button type="submit">Request Booking</button>
+        </form>
+    </section>
 
     <section class="why-us">
         <h2>Why Choose Us</h2>
